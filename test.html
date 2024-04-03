@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        .question{
+            background-color:rgb(201, 203, 204) ;
+
+        }
+        .up{
+            background-color: rgb(201, 203, 204);
+        }
+    </style>
+    <script>
+        function testResult(){
+            var count = 0;
+            var q1 = document.getElementById('static1').checked;
+            var q2 = document.getElementById('dynamic2').checked;
+            
+            if (q1 && q2) {
+                count = 4;
+            } else if (q1 || q2) {
+                count = 2;
+            } else {
+                count = 0;
+            }
+            
+            alert("You've got " + count + " marks!!!");
+            return false; // Prevent form submission
+        }
+    </script>
+</head>
+<body>
+    <div class="up">
+    <h2 style="text-align:center">Online Examination</h2>
+    <form onsubmit="return testResult()">
+        <h3 style="text-align:center">(MCQ, 2 marks each)</h3> 
+    </div> 
+        <br /> 
+        <div class="question">
+        <p>Q1. HTML is for:</p>
+        <ul class="choices" style="list-style-type: none;">
+            <li>
+                <input type="radio" name="question0" id="dynamic1" value="A" />Dynamic page
+            </li>
+            <li>
+                <input type="radio" name="question0" id="static1" value="B" />Static Page
+            </li>
+            <li>
+                <input type="radio" name="question0" id="none1" value="C" />None of the above
+            </li>
+        </ul>
+
+        <p>Q2. JS is for:</p>
+        <ul class="choices" style="list-style-type: none;">
+            <li>
+                <input type="radio" name="question1" id="dynamic2" value="A" />Dynamic page
+            </li>
+            <li>
+                <input type="radio" name="question1" id="static2" value="B" />Static Page
+            </li>
+            <li>
+                <input type="radio" name="question1" id="none2" value="C" />None of the above
+            </li>
+        </ul>
+
+        <button type="submit" class="view-results">View Results</button>
+    </div>
+    </form>
+</body>
+</html>
