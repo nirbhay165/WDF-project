@@ -1,302 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          background-color: #f8f9fa;
-          color: #333;
-      }
-      .carousel-item img {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-    }
-        header{
-            background-color: #efd665;
-            padding: 12px;
-            text-align: center;
-        }
-        nav{
-            background-color: #dcc752;
-        }
-        nav ul {
-            list-style: none;
-            padding: 12px;
-        }
-        nav ul li{
-            display: inline;
-        }
-        nav ul li a{
-            color: white;
-            text-decoration: none;
-            margin-right: 12px;
-        }
-        .register_form {
-          width: 80%;
-          max-width: 500px;
-          margin: 20px auto;
-          background-color: #c5bebe;
-          padding: 30px;
-          border-radius: 10px;
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-      }
-        .register_form h1{
-            margin-bottom: 24px;
-        }
-        input,select,textarea{
-            margin-bottom: 12px;
-            padding: 4px;
-            border: none;
-            border-bottom: 2px solid black;
-            outline: none;
-            background-color: transparent;
-        }
-        .register_form button{
-            padding: 12px 24px;
-            border: none;
-            background-color: #4169e1;
-            color: #ffffff;
-            border-radius: 24px;
-        }
-    </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script>
-      function fun1(){
-        alert("Thanks for Register")
-      }
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-    </script>
-</head>
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-<body>
-    <header>
-        <h1>Live Virtual Class</h1>
-    </header>
-    <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img.jpg" class="d-block w-100" alt="..." height="400px">
-          </div>
-          <div class="carousel-item">
-            <img src="img2.jpg" class="d-block w-100" alt="..." height="400px">
-          </div>
-          <div class="carousel-item">
-            <img src="img3.jpg" class="d-block w-100" alt="..." height="400px">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-   
-    <nav>
-        <ul>
-            <li class="nav-item"><a href="home.html">Home</a></li>
-            <li class="nav-item"><a href="about.html">About</a></li>
-            <li class="nav-item dropdown d-inline">
-                <a class="nav-link dropdown-toggle d-inline" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  All Cources
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">MEAN STACK</a></li>
-                  <li><a class="dropdown-item" href="#">JAVA</a></li>
-                  <li><a class="dropdown-item" href="#">PYTHON</a></li>
-                  <li><a class="dropdown-item" href="#">DEVOPS</a></li>
-                </ul>
-              </li>
-            <li class="nav-item"><a href="#" id="registerLink">Register</a></li>
-            <li class="nav-item"><a href="contactus.html">Contact Us</a></li>
-            <li class="nav-item"><a href="test.html">Online Test</a></li>
-        </ul>
-    </nav>
+        <title>Nirbhay's Portfolio</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <!-- <a href="#" class="nav__logo">Nirbhay Rajodiya</a> -->
+                    <h1 style="color: #FFF;">Nirbhay Rajodiya</h1>
+                </div>
 
-    <main>
-      <!-- Registration form initially hidden -->
-      <div class="register_form" id="registerForm" style="display: none;">
-          <h1>Registration Form</h1>
-          <form name="frm1">
-              <input type="text" name="name" placeholder="Enter Your Name" required>
-              <br>
-              <input type="email" name="email" placeholder="Enter Your Email" required>
-              <br>
-              <select name="course">
-                  <option value="java">Java</option>
-                  <option value="cplusplus">C++</option>
-                  <option value="c">C</option>
-                  <option value="python">Python</option>
-              </select>
-              <br>
-              <textarea name="remark" placeholder="Enter Your Remarks" rows="4"></textarea>
-              <br>
-              <input type="button" onclick="fun1()" value="Register" />
-          </form>
-      </div>
-  </main>
-    
-<!-- Footer -->
-<footer class="text-center text-lg-start bg-body-tertiary text-muted">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
-      </div>
-      <!-- Left -->
-  
-      <!-- Right -->
-      <div>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-  
-    <!-- Section: Links  -->
-    <section class="">
-      <div class="container text-center text-md-start mt-5">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i>Company name
-            </h6>
-            <p>
-              Here you can use rows and columns to organize your footer content. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit.
-            </p>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Products
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Angular</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">React</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Vue</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Laravel</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Useful links
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Pricing</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Settings</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Orders</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Help</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-            <p>
-              <i class="fas fa-envelope me-3"></i>
-              info@example.com
-            </p>
-            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-          </div>
-          <!-- Grid column -->
-        </div>
-        <!-- Grid row -->
-      </div>
-    </section>
-    <!-- Section: Links  -->
-  
-    <!-- Copyright -->
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-      © 2021 Copyright:
-      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                        <!-- <li class="nav__item"><a href="#work" class="nav__link">Work</a></li> -->
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
 
-  <script>
-    // Function to show the registration form
-    function showRegisterForm() {
-        var registerForm = document.getElementById("registerForm");
-        registerForm.style.display = "block";
-    }
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
 
-    // Function to hide the registration form
-    function hideRegisterForm() {
-        var registerForm = document.getElementById("registerForm");
-        registerForm.style.display = "none";
-    }
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Nirbhay Rajodiya</span><br>Software Developer</h1>
 
-    // Event listener for clicking the "Register" link
-    document.getElementById("registerLink").addEventListener("click", function (event) {
-        event.preventDefault(); // Prevent default link behavior
-        showRegisterForm(); // Show the registration form
-    });
+                    <a href="mailto:rajodiyanirbhay165@gmail.com" class="button">Contact</a>
+                </div>
 
-    // Function to handle registration button click
-    function fun1() {
-        alert("Thanks for Registering!");
-        hideRegisterForm(); // Hide the registration form after registering
-    }
-</script>
-</body>
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/nirbhay-rajodiya/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://www.instagram.com/nirbhayyr_?igsh=cHhyemZxaTc1bWMz&utm_source=qr" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://github.com/nirbhay165" class="home__social-icon"><i class='bx bxl-github' ></i></a>
+                </div>
 
+                <div class="home__img">
+                    <svg class="home__blob" viewBox="0 0 500 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <mask id="mask0" mask-type="alpha">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
+                            <image class="home__blob-img" x="50" y="60" href="assets/img/perfil.png"/>
+                        </g>
+                    </svg>
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about-section" id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    
+                    <div class="about-center">
+                        <h2 class="about__subtitle">I'am Nirbhay Rajodiya</h2>
+                        <p class="about__text">
+                            I am an undergraduate student specializing in Computer Science and Technology, driven by a fervent passion for utilizing technology to unravel intricate challenges. Over the course of my academic journey, I've engaged in a diverse range of projects, delving deep into various technologies and programming languages. Proficiency in Java, Python, and C++, coupled with hands-on experience, has enabled me to craft and deploy sophisticated algorithms and data structures effectively. Furthermore, my expertise extends to web development technologies, including HTML, CSS, and Spring Boot, where I've excelled in designing and implementing responsive, user-centric websites. With a solid foundation in database management using MySQL, I ensure efficient data handling and retrieval. My enthusiasm for problem-solving fuels my drive to continuously master new technologies and embrace novel challenges. I am confident in my ability to contribute significantly to any team and am eager to continue growing and making impactful strides in the ever-evolving landscape of technology.</p>           
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container">          
+                    <div>
+                        <h2 class="skills__subtitle">Proficient in Java, Python, and C++, I've applied these languages to develop intricate algorithms and data structures.<br>
+                        Comprehensive knowledge of web development technologies, including HTML, CSS, and Javascript.<br>
+                        Experience in designing and constructing responsive, user-centric websites.
+                        Hands-on expertise in database management with MySQL.</p>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-html5 skills__icon'></i>
+                                <span class="skills__name">HTML5</span>
+                            </div>
+                            <div class="skills__bar skills__html">
+
+                            </div>
+                            <div>
+                                <span class="skills__percentage">95%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-css3 skills__icon'></i>
+                                <span class="skills__name">CSS3</span>
+                            </div>
+                            <div class="skills__bar skills__css">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxl-javascript skills__icon' ></i>
+                                <span class="skills__name">JAVASCRIPT</span>
+                            </div>
+                            <div class="skills__bar skills__js">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">65%</span>
+                            </div>
+                        </div>
+                        <div class="skills__data">
+                            <div class="skills__names">
+                                <i class='bx bxs-paint skills__icon'></i>
+                                <span class="skills__name">DSA</span>
+                            </div>
+                            <div class="skills__bar skills__ux">
+                                
+                            </div>
+                            <div>
+                                <span class="skills__percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <form action="" class="contact__form">
+                        <input type="text" placeholder="Name" class="contact__input">
+                        <input type="mail" placeholder="Email" class="contact__input">
+                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                        <input type="button" value="Submit" class="contact__button button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <div class="footer__social">
+                <a href="https://discordapp.com/users/1218233608926662727" class="footer__icon"><i class='bx bxl-discord' ></i></a>
+                <a href="https://www.instagram.com/nirbhayyr_?igsh=cHhyemZxaTc1bWMz&utm_source=qr" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                <a href="#" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+            </div>
+            
+        </footer>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
